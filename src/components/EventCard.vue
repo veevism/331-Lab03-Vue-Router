@@ -20,19 +20,7 @@ const props = defineProps({
     }
 })
 </script>
-<!-- import { ref } from 'vue'
-import { type EventItem } from '@/type';
-const event = ref<EventItem>({
-    id: 5928101,
-    category: 'animal welfare',
-    title: 'Cat Adoption Day',
-    description: 'Find your new feline friend at this event',
-    location: 'Meow Town',
-    date: 'January 28, 2002',
-    time: '12:00',
-    petsAllowed: true,
-    organizer: "Kat Laydee"
-}) -->
+
 
 <style scoped>
 .event-card {
