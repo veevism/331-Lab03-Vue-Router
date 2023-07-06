@@ -23,8 +23,12 @@ EventService.getEventById(Number(props.id)).then((response) => {
     <div>
         <div v-if="event">
             <h1>{{ event.title }}</h1>
-            <span>@{{ event.time }} on {{ event.date }} @ {{ event.location }}</span>
-            <p>{{ event.description }}</p>
+            <div id="nav">
+                <RouterLink :to="{ name: 'event-detail', params: { id } }">Details</RouterLink>
+                <RouterLink :to="{ name: 'event-register', params: { id } }">Register</RouterLink>
+                <RouterLink :to="{ name: 'event-edit', params: { id } }">Edit</RouterLink>
+            </div>
+            <RouterView :event="event"></RouterView>
         </div>
     </div>
 </template>
